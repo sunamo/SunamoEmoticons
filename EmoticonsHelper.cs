@@ -1,22 +1,37 @@
-namespace SunamoShared.Helpers;
+namespace SunamoEmoticons;
+using Microsoft.Extensions.Logging;
+using SunamoEmoticons._sunamo;
 
 public class EmoticonsHelper
 {
-    public static List<string> GetAllEmotions()
+    public static List<string> GetAllEmotions(ILogger logger)
     {
-        Emoticons emoticons = new Emoticons();
-        var fields = RH.GetFields(emoticons);
+        Emoticons emoticons = new();
+        var fields = emoticons.GetType().GetFields();
 
-
-
-        List<string> result = new List<string>();
+        List<string> result = new();
 
         foreach (var item in fields)
         {
             var value = item.GetValue(emoticons);
-            var ts = value.ToString();
+            if (value != null)
+            {
+                var ts = value.ToString();
 
-            result.AddRange(SHSplit.SplitByWhiteSpaces(ts));
+                if (ts != null)
+                {
+                    result.AddRange(SHSplit.SplitByWhiteSpaces(ts));
+                }
+                else
+                {
+                    logger.LogDebug(message: $"{item.Name}.ToString() in Emoticons was null");
+                }
+
+            }
+            else
+            {
+                logger.LogDebug(message: $"{item.Name} in Emoticons was null");
+            }
         }
 
         return result;

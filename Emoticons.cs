@@ -1,4 +1,4 @@
-namespace SunamoShared._sunamo.SunamoValues.Values;
+namespace SunamoEmoticons;
 
 
 /// <summary>
