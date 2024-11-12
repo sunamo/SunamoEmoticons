@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 internal class SHSplit
 {
-    public static string[] SplitByWhiteSpaces(string text)
+    internal static string[] SplitByWhiteSpaces(string text)
     {
         return text.Split(new char[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
     }
