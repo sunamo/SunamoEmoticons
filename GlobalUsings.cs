@@ -1,6 +1,5 @@
 global using SunamoEmoticons;
 global using SunamoEmoticons._sunamo;
-
 global using Microsoft.Extensions.Logging;
 global using System.Collections.Generic;
 global using System.Linq;
