@@ -1,14 +1,16 @@
 namespace SunamoEmoticons;
 
 /// <summary>
-/// all must be internal due to object.GetFields()
+/// Contains text representations of various emoticons grouped by emotion type.
+/// All fields must be internal due to object.GetFields() reflection usage.
 /// </summary>
 internal class Emoticons
 {
     /// <summary>
-    /// :3 - 10:30
+    /// Happy face emoticons.
+    /// Note: Pattern :3 conflicts with time format 10:30
     /// </summary>
-    internal string happyFace = @":‑)
+    internal string HappyFace = @":‑)
 :)	:-]
 :]	:-3
 :->
@@ -24,7 +26,11 @@ xD	X‑D
 XD
 =D
 =3	B^D";
-    internal string frownSadAngryPouting = @":‑(
+
+    /// <summary>
+    /// Frown, sad, angry, and pouting emoticons.
+    /// </summary>
+    internal string FrownSadAngryPouting = @":‑(
 :(	:‑c
 :c	:‑<
 :<	:‑[
@@ -33,26 +39,48 @@ XD
 :{
 :@
 >:(";
-    internal string crying = @":'‑(
+
+    /// <summary>
+    /// Crying emoticons.
+    /// </summary>
+    internal string Crying = @":'‑(
 :'(";
-    internal string tearsOfHappiness = @":'‑)
+
+    /// <summary>
+    /// Tears of happiness emoticons.
+    /// </summary>
+    internal string TearsOfHappiness = @":'‑)
 :')";
-    internal string horrorDisgustSadnessGreadDismay = @":‑O
+
+    /// <summary>
+    /// Horror, disgust, sadness, great dismay emoticons.
+    /// </summary>
+    internal string HorrorDisgustSadnessGreatDismay = @":‑O
 :O	:‑o
 :o	:-0	8‑0
 >:O";
-    internal string kiss = @":-*
+
+    /// <summary>
+    /// Kiss emoticons.
+    /// </summary>
+    internal string Kiss = @":-*
 :*
 :×";
+
+    /// <summary>
+    /// Wink and smirk emoticons.
+    /// </summary>
     internal string WinkSmirk = @";‑)
 ;)	*-)
 *)	;‑]
 ;]	;^)	:‑,
 ;D";
+
     /// <summary>
-    /// XP, xp - name OS
+    /// Tongue sticking out, cheeky, playful emoticons.
+    /// Note: XP, xp conflicts with Windows XP operating system name
     /// </summary>
-    internal string tongueStickingOutCheekyPlayful = @":‑P
+    internal string TongueStickingOutCheekyPlayful = @":‑P
 :P	X‑P
 x‑p
 :‑p
@@ -62,39 +90,83 @@ x‑p
 :b
 d:
 =p	>:P";
-    /*
-    * :/ - http://
-    * :L - :Linux
-    */
-    internal string skepticalAnnoyedUndecidedUneasyHesitant = @":‑/
+
+    /// <summary>
+    /// Skeptical, annoyed, undecided, uneasy, hesitant emoticons.
+    /// Note: :/ conflicts with http://
+    /// Note: :L conflicts with :Linux
+    /// </summary>
+    internal string SkepticalAnnoyedUndecidedUneasyHesitant = @":‑/
 :‑.	>:\	>:/	:\	=/	=\		=L	:S";
-    internal string indecision = @":‑|
+
+    /// <summary>
+    /// Indecision emoticons.
+    /// </summary>
+    internal string Indecision = @":‑|
 :|";
-    internal string embarrassedBlushing = @":$	://)
+
+    /// <summary>
+    /// Embarrassed and blushing emoticons.
+    /// </summary>
+    internal string EmbarrassedBlushing = @":$	://)
 ://3";
-    internal string tongueTied = @":‑X
+
+    /// <summary>
+    /// Tongue-tied emoticons.
+    /// </summary>
+    internal string TongueTied = @":‑X
 :X	:‑#
 :#	:‑&
 :&";
-    /*
-    * 0:3 - 10:30
-    */
-    internal string angelSaint = @"O:‑)
+
+    /// <summary>
+    /// Angel and saint emoticons.
+    /// Note: Pattern 0:3 conflicts with time format 10:30
+    /// </summary>
+    internal string AngelSaint = @"O:‑)
 O:)	0:‑3
 0:‑)
 0:)	0;^)";
-    internal string evil = @">:‑)
+
+    /// <summary>
+    /// Evil emoticons.
+    /// </summary>
+    internal string Evil = @">:‑)
 >:)	}:‑)
 }:)	3:‑)
 3:)
 >;)	>:3
 >;3";
-    internal string tongueInCheek = ":‑J";
-    internal string partiedAllNight = "#‑)";
-    internal string drunk = @"%‑)
+
+    /// <summary>
+    /// Tongue-in-cheek emoticon.
+    /// </summary>
+    internal string TongueInCheek = ":‑J";
+
+    /// <summary>
+    /// Partied all night emoticon.
+    /// </summary>
+    internal string PartiedAllNight = "#‑)";
+
+    /// <summary>
+    /// Drunk emoticons.
+    /// </summary>
+    internal string Drunk = @"%‑)
 %)";
-    internal string beingSick = @":‑###..
+
+    /// <summary>
+    /// Being sick emoticons.
+    /// </summary>
+    internal string BeingSick = @":‑###..
 :###..";
-    internal string dunceLike = @"<:‑|";
-    internal string disbelief = "',:-|	',:-l";
+
+    /// <summary>
+    /// Dunce-like emoticon.
+    /// </summary>
+    internal string DunceLike = @"<:‑|";
+
+    /// <summary>
+    /// Disbelief emoticons.
+    /// </summary>
+    internal string Disbelief = "',:-|	',:-l";
 }
