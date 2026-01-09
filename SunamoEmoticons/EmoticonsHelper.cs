@@ -15,9 +15,9 @@ public class EmoticonsHelper
         Emoticons emoticons = new();
         var fields = emoticons.GetType().GetFields();
         List<string> result = new();
-        foreach (var item in fields)
+        foreach (var field in fields)
         {
-            var value = item.GetValue(emoticons);
+            var value = field.GetValue(emoticons);
             if (value != null)
             {
                 var valueAsString = value.ToString();
@@ -27,12 +27,12 @@ public class EmoticonsHelper
                 }
                 else
                 {
-                    logger.LogDebug(message: $"{item.Name}.ToString() in Emoticons was null");
+                    logger.LogDebug(message: $"{field.Name}.ToString() in Emoticons was null");
                 }
             }
             else
             {
-                logger.LogDebug(message: $"{item.Name} in Emoticons was null");
+                logger.LogDebug(message: $"{field.Name} in Emoticons was null");
             }
         }
         return result;
