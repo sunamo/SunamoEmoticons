@@ -1,3 +1,4 @@
+// variables names: ok
 namespace SunamoEmoticons._sunamo;
 
 /// <summary>
