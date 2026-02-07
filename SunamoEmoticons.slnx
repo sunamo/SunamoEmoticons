@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SunamoEmoticons.Tests\\SunamoEmoticons.Tests.csproj" />
+  <Project Path="RunnerEmoticons\\RunnerEmoticons.csproj" />
+  <Project Path="SunamoEmoticons\SunamoEmoticons.csproj" />
+</Solution>
