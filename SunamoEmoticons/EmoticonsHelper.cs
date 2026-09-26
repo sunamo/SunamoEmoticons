@@ -12,9 +12,9 @@ public class EmoticonsHelper
     /// <returns>List of all individual emoticon strings extracted from all emoticon fields.</returns>
     public static List<string> GetAllEmotions(ILogger logger)
     {
-        Emoticons emoticons = new();
+        var emoticons = new Emoticons();
         var fields = emoticons.GetType().GetFields();
-        List<string> result = new();
+        var result = new List<string>();
         foreach (var field in fields)
         {
             var value = field.GetValue(emoticons);
