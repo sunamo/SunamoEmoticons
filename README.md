@@ -1,5 +1,10 @@
 # SunamoEmoticons
 
+## Short description
+
+Textové emotikony pro různé typy nálad.
+
+
 Text emoticons for various types of moods
 
 ## Overview
