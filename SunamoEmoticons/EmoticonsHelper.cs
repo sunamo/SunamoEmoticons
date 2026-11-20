@@ -1,7 +1,15 @@
 namespace SunamoEmoticons;
 
+/// <summary>
+/// Represents the emoticons helper type.
+/// </summary>
 public class EmoticonsHelper
 {
+    /// <summary>
+    /// Get all emotions.
+    /// </summary>
+    /// <param name="logger">The logger.</param>
+    /// <returns>The get all emotions result.</returns>
     public static List<string> GetAllEmotions(ILogger logger)
     {
         var emoticons = new Emoticons();
