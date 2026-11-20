@@ -1,4 +1,3 @@
-// variables names: ok
 namespace SunamoEmoticons.Tests;
 
 using Microsoft.Extensions.Logging.Abstractions;
